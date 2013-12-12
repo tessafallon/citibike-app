@@ -1,0 +1,23 @@
+<h1>Map my route!</h1>
+
+<form action="/map" method="POST">
+
+ <select id="POST-start" name="start">
+ 	<label for="POST-start" name="start">Start:</label>
+ 	<% @data["stationBeanList"].each do |h| %>
+	<option value="<%=h["stationName"]%>"><%=h["stationName"]%></option>
+	<% end %>"
+</select>
+
+<br/>
+
+ <select id="POST-end" name="end">
+ 	<label for="POST-end" name="end">End:</label>
+ 	<% @data["stationBeanList"].each do |h| %>
+	<option value="<%=h["stationName"]%>"><%=h["stationName"]%></option>
+	<% end %>"
+</select>
+
+<button type="submit" value="Submit">Submit</button>
+
+</form>
