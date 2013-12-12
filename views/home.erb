@@ -1,6 +1,9 @@
 <h1>THE DATA</h1>
 <% @data.inspect %>
 <% @data["stationBeanList"].each do |h| %>
-	<li><%= h["stationName"] %></li>
-	<%= h["latitude"] %>
-	<% end %>
+<dl>
+	<dt><%= h["stationName"] %></dt>
+		<dd><%= h["latitude"] %></dd>
+		<dd><%= h["longitude"]%></dd>
+		<% end %>
+</dl>
