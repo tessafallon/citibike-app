@@ -15,7 +15,7 @@ module Citibike
     end
 
     before do
-      json = File.open("data/citibikenyc.json").read
+      json = File.open("data/station_data.json").read
       @data = MultiJson.load(json)
     end
 
