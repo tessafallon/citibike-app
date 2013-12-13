@@ -5,7 +5,8 @@
  <select id="POST-start" name="start">
  	<label for="POST-start" name="start">Start:</label>
  	<% @data["stationBeanList"].each do |h| %>
-	<option value="<%=h["stationName"]%>"><%=h["stationName"]%></option>
+	<option value="<%= [h["latitude"], h["longitude"]]%>"> 
+		<%= h["stationName"] %></option>
 	<% end %>"
 </select>
 
@@ -14,7 +15,8 @@
  <select id="POST-end" name="end">
  	<label for="POST-end" name="end">End:</label>
  	<% @data["stationBeanList"].each do |h| %>
-	<option value="<%=h["stationName"]%>"><%=h["stationName"]%></option>
+	<option value="<%= [h["latitude"], h["longitude"]]%>"> 
+		<%= h["stationName"] %></option>
 	<% end %>"
 </select>
 

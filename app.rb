@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler'
-require "sinatra/reloader"
+require 'sinatra/reloader'
 
 Bundler.require
 
@@ -28,10 +28,12 @@ module Citibike
     end
 
     post '/form' do
-    erb :response
+    erb :map
     end
 
     post '/map' do
+      @start_st = params["start"]
+      @end_st = params["end"]
       erb :map
     end
   end
